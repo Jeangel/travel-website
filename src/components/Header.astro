@@ -1,23 +1,36 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
+import Icon from "./Icon.astro";
 ---
 
-<header>
+<header class="w-full">
   <nav class="flex justify-between">
     <a class="font-semibold text-base">Travel</a>
-    <ul class="flex gap-16 justify-end">
-      <li>
-        <HeaderLink path="/">Home</HeaderLink>
-      </li>
-      <li>
-        <HeaderLink path="/about">About</HeaderLink>
-      </li>
-      <li>
-        <HeaderLink path="/popular">Popular</HeaderLink>
-      </li>
-      <li>
-        <HeaderLink path="/explore">Explore</HeaderLink>
-      </li>
-    </ul>
+    <button
+      data-collapse-toggle="navbar-default"
+      type="button"
+      class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none"
+      aria-controls="navbar-default"
+      aria-expanded="false"
+    >
+      <span class="sr-only">Open main menu</span>
+      <Icon icon="hamburger-menu" />
+    </button>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+      <ul class="flex justify-end md:gap-12 lg:gap-16">
+        <li>
+          <HeaderLink path="/">Home</HeaderLink>
+        </li>
+        <li>
+          <HeaderLink path="/about">About</HeaderLink>
+        </li>
+        <li>
+          <HeaderLink path="/popular">Popular</HeaderLink>
+        </li>
+        <li>
+          <HeaderLink path="/explore">Explore</HeaderLink>
+        </li>
+      </ul>
+    </div>
   </nav>
 </header>

@@ -1,0 +1,11 @@
+---
+interface Props {
+  class?: string
+}
+const { class: cssClass, ...attributes } = Astro.props
+---
+
+<button class={`h-14 px-6 py-[18px] w-fit bg-white bg-opacity-20 backdrop-blur-xl justify-center items-center gap-6 inline-flex ${cssClass}`} {...attributes}>
+  <span class="text-base font-semibold"><slot></slot></span>
+  <slot name="right-icon"></slot>
+</button>
