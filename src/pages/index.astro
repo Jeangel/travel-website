@@ -3,32 +3,81 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Button from "../components/Button.astro";
 import Icon from "../components/Icon.astro";
+import CountryCard from "../components/CountryCard.astro";
 import PlaceCard from "../components/PlaceCard.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main class="min-h-screen relative bg-main bg-auto bg-top md:bg-contain bg-no-repeat">
+  <main
+    class="min-h-screen relative bg-main bg-auto bg-top md:bg-contain bg-no-repeat"
+  >
     <section
-      class="h-full w-full px-6 py-5 flex flex-col items-center bg-gradient-to-t from-black to-100% md:items-start md:px-40 md:py-8 md:to-60%"
+      class="h-full w-full px-6 pt-5 pb-16 flex flex-col items-center bg-gradient-to-t from-black to-100% md:items-start md:px-40 md:py-8 md:to-60%"
     >
       <Header />
-      <h2 class="text-2xl font-semibold mt-32 text-center md:text-left">Welcome To Travel</h2>
-      <h1 class="text-7xl font-semibold mt-2 mb-4 text-center md:text-left">Explore<br />The World</h1>
+      <h2 class="text-2xl font-semibold mt-32 text-center md:text-left">
+        Welcome To Travel
+      </h2>
+      <h1 class="text-7xl font-semibold mt-2 mb-4 text-center md:text-left">
+        Explore<br />The World
+      </h1>
       <p class="text-base text-center md:text-left">
-        Live the trips exploring the world, discover paradises,<br class="hidden md:block" />
+        Live the trips exploring the world, discover paradises,<br
+          class="hidden md:block"
+        />
          islands, mountains and much more, get your trip now.
       </p>
       <Button class="mt-10 mb-16">
         Start Your Journey <Icon icon="right-arrow" slot="right-icon" />
       </Button>
-      <section class="flex flex-col items-center gap-y-6 md:flex-row md:items-start md:gap-x-6 w-full">
-        <PlaceCard name="Croatia" path="home-trees" />
-        <PlaceCard name="Iceland" path="home-lake" />
-        <PlaceCard name="Italy" path="home-mountain" />
-        <PlaceCard name="Spain" path="home-beach" />
-      </section>
+      <div
+        class="flex flex-col items-center gap-y-6 md:flex-row md:items-start md:gap-x-6 w-full"
+      >
+        <CountryCard name="Croatia" path="home-trees" />
+        <CountryCard name="Iceland" path="home-lake" />
+        <CountryCard name="Italy" path="home-mountain" />
+        <CountryCard name="Spain" path="home-beach" />
+      </div>
     </section>
-    <section class="min-h-screen"></section>
+    <section class="pt-8 pb-12 px-6 flex flex-col items-center">
+      <h2 class="font-semibold text-center text-2xl">
+        Learn More <br />About Travel
+      </h2>
+      <p class="text-base text-body text-center text-balance mt-6">
+        All the trips around the world are a great pleasure and happiness for
+        anyone, enjoy the sights when you travel the world. Travel safely and
+        without worries, get your trip and explore the paradises of the world.
+      </p>
+      <Button class="mt-8 mb-12">
+        Explore Travel <Icon icon="right-arrow" slot="right-icon" />
+      </Button>
+      <div class="size-[300px] relative">
+        <img
+          class="h-full w-full absolute"
+          src="/places/about-beach.jpg"
+          alt="Beach"
+        />
+        <div
+          class="h-full w-full absolute bg-gradient-to-t from-black from-[-10%] to-40%"
+        >
+        </div>
+      </div>
+    </section>
+    <section class="pt-16 pb-12 px-6 flex flex-col items-center">
+      <h2 class="font-semibold text-center text-2xl mb-12">
+        Enjoy The Beauty <br />Of The World
+      </h2>
+      <div
+        class="flex flex-col items-center gap-y-10 md:flex-row md:items-start md:gap-x-6 w-full"
+      >
+        <PlaceCard country="Canada" name="Logan Mountain" path="popular-mountain" />
+        <PlaceCard country="Ireland" name="Spike Forest" path="popular-forest" />
+        <PlaceCard country="Italy" name="Garda Lake" path="popular-lake" />
+      </div>
+    </section>
+    <section class="pt-16 pb-12 px-6 flex flex-col items-center">
+
+    </section>
   </main>
 </Layout>
 

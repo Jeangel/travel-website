@@ -1,17 +1,26 @@
 ---
+import Icon from "./Icon.astro";
 interface Props {
   path: string;
   name: string;
+  country: string;
 }
 
-const { name, path } = Astro.props;
+const { name, country, path } = Astro.props;
 ---
 
-<article
-  class="w-64 h-44 bg-cover bg-no-repeat"
-  style={`background-image: url('/places/${path}.jpg');`}
->
-  <div class="p-6 flex items-end h-full w-full bg-gradient-to-t from-black to-40%">
-    <h3 class="font-semibold text-xl">{name}</h3>
+<article>
+  <div class="size-60 relative">
+    <img
+      class="h-full w-full absolute"
+      src={`/places/${path}.jpg`}
+      alt={`${name} in ${country}`}
+    />
+    <div class="h-full w-full absolute bg-gradient-to-t from-black to-40%"></div>
+  </div>
+  <h3 class="font-semibold text-xl pt-4 pb-2">{name}</h3>
+  <div class="flex gap-x-1">
+    <Icon icon="map-pin" />
+    <span class="text-sm text-body">{country}</span>
   </div>
 </article>

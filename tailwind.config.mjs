@@ -8,6 +8,9 @@ export default {
       },
 			fontFamily: {
 				'sans': ['Montserrat', 'Poppins']
+			},
+			textColor: {
+				'body': '#B3B3B3'
 			}
 		},
 	},

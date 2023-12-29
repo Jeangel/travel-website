@@ -1,0 +1,17 @@
+---
+interface Props {
+  path: string;
+  name: string;
+}
+
+const { name, path } = Astro.props;
+---
+
+<article
+  class="w-64 h-44 bg-cover bg-no-repeat"
+  style={`background-image: url('/places/${path}.jpg');`}
+>
+  <div class="p-6 flex items-end h-full w-full bg-gradient-to-t from-black to-40%">
+    <h3 class="font-semibold text-xl">{name}</h3>
+  </div>
+</article>
