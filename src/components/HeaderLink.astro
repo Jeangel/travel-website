@@ -1,0 +1,16 @@
+---
+interface Props {
+  path: string
+}
+
+const { path } = Astro.props
+const currentPath = Astro.url.pathname === "" ? "/" : Astro.url.pathname
+const isActive = path === currentPath
+---
+
+<Fragment>
+  <a href={path} class="text-base font-medium">
+    <slot />
+  </a>
+  {isActive && <div class="w-[35px] h-0.5 bg-zinc-100"></div>} 
+</Fragment>

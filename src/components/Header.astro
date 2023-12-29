@@ -1,0 +1,23 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+---
+
+<header>
+  <nav class="flex justify-between">
+    <a class="font-semibold text-base">Travel</a>
+    <ul class="flex gap-16 justify-end">
+      <li>
+        <HeaderLink path="/">Home</HeaderLink>
+      </li>
+      <li>
+        <HeaderLink path="/about">About</HeaderLink>
+      </li>
+      <li>
+        <HeaderLink path="/popular">Popular</HeaderLink>
+      </li>
+      <li>
+        <HeaderLink path="/explore">Explore</HeaderLink>
+      </li>
+    </ul>
+  </nav>
+</header>
