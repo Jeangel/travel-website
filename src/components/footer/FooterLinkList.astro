@@ -1,0 +1,23 @@
+---
+interface Props {
+  name: string;
+  links: { text: string; path: string }[];
+}
+
+const { name, links } = Astro.props;
+---
+
+<div>
+  <h4 class="text-base font-semibold mb-4">{name}</h4>
+  <ul class="flex flex-col gap-y-3">
+    {
+      links.map((item) => (
+        <li>
+          <a class="text-body font-normal text-base" href={item.path}>
+            {item.text}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>

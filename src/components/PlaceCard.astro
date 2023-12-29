@@ -6,6 +6,7 @@ interface Props {
   country: string;
 }
 
+
 const { name, country, path } = Astro.props;
 ---
 
@@ -16,7 +17,8 @@ const { name, country, path } = Astro.props;
       src={`/places/${path}.jpg`}
       alt={`${name} in ${country}`}
     />
-    <div class="h-full w-full absolute bg-gradient-to-t from-black to-40%"></div>
+    <div class="h-full w-full absolute bg-gradient-to-t from-black to-40%">
+    </div>
   </div>
   <h3 class="font-semibold text-xl pt-4 pb-2">{name}</h3>
   <div class="flex gap-x-1">

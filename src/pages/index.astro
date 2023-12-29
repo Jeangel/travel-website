@@ -5,6 +5,7 @@ import Button from "../components/Button.astro";
 import Icon from "../components/Icon.astro";
 import CountryCard from "../components/CountryCard.astro";
 import PlaceCard from "../components/PlaceCard.astro";
+import Footer from "../components/footer/Footer.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -12,7 +13,8 @@ import PlaceCard from "../components/PlaceCard.astro";
     class="min-h-screen relative bg-main bg-auto bg-top md:bg-contain bg-no-repeat"
   >
     <section
-      class="h-full w-full px-6 pt-5 pb-16 flex flex-col items-center bg-gradient-to-t from-black to-100% md:items-start md:px-40 md:py-8 md:to-60%"
+      class="h-full w-full px-6 pt-5 pb-16 flex flex-col items-center relative bg-gradient-to-t from-black to-100% md:items-start md:px-40 md:py-8 md:to-60%
+      before:bg-gradient-to-b before:from-[#0009] before:to-[1%] before:block before:absolute before:inset-0"
     >
       <Header />
       <h2 class="text-2xl font-semibold mt-32 text-center md:text-left">
@@ -51,16 +53,15 @@ import PlaceCard from "../components/PlaceCard.astro";
       <Button class="mt-8 mb-12">
         Explore Travel <Icon icon="right-arrow" slot="right-icon" />
       </Button>
-      <div class="size-[300px] relative">
+      <div
+        class="size-[300px] relative
+      after:bg-gradient-to-t after:from-black after:to-40% after:block after:absolute after:inset-0"
+      >
         <img
           class="h-full w-full absolute"
           src="/places/about-beach.jpg"
           alt="Beach"
         />
-        <div
-          class="h-full w-full absolute bg-gradient-to-t from-black from-[-10%] to-40%"
-        >
-        </div>
       </div>
     </section>
     <section class="pt-16 pb-12 px-6 flex flex-col items-center">
@@ -70,14 +71,74 @@ import PlaceCard from "../components/PlaceCard.astro";
       <div
         class="flex flex-col items-center gap-y-10 md:flex-row md:items-start md:gap-x-6 w-full"
       >
-        <PlaceCard country="Canada" name="Logan Mountain" path="popular-mountain" />
-        <PlaceCard country="Ireland" name="Spike Forest" path="popular-forest" />
+        <PlaceCard
+          country="Canada"
+          name="Logan Mountain"
+          path="popular-mountain"
+        />
+        <PlaceCard
+          country="Ireland"
+          name="Spike Forest"
+          path="popular-forest"
+        />
         <PlaceCard country="Italy" name="Garda Lake" path="popular-lake" />
       </div>
     </section>
-    <section class="pt-16 pb-12 px-6 flex flex-col items-center">
-
+    <section class="w-screen pt-8 pb-12 flex flex-col items-center">
+      <div
+        class="w-full h-[333px] relative flex justify-center items-end pb-6
+        bg-explore-beach bg-cover bg-center
+        before:bg-gradient-to-b before:from-black before:to-40% before:block before:absolute before:inset-0
+        after:bg-gradient-to-t after:from-black after:from-5% after:to-40% after:block after:absolute after:inset-0"
+      >
+        <h2 class="font-semibold text-center h-fit text-2xl z-10">
+          Explore The <br />Best Paradises
+        </h2>
+      </div>
+      <div class="px-6">
+        <p class="text-base text-body text-center text-balance mt-6">
+          Exploring paradises such as islands and valleys when traveling the
+          world is one of the greatest experiences when you travel, it offers
+          you harmony and peace and you can enjoy it with great comfort.
+        </p>
+        <div class="flex gap-x-1 items-center justify-center pt-10">
+          <img
+            class="w-10 h-10 rounded-full object-cover"
+            src="/gaia.jpg"
+            alt="Rounded avatar"
+          />
+          <p class="text-base font-medium">Gaia Maria</p>
+        </div>
+      </div>
     </section>
+    <section class="w-screen pt-8 pb-12 px-6 flex flex-col items-center">
+      <h2 class="font-semibold text-center h-fit text-2xl z-10">
+        Your Journey<br />Starts Here
+      </h2>
+      <p class="text-base text-body text-center mt-6">
+        Get up to date with the latest travel and information from us.
+      </p>
+      <div class="w-full mt-8">
+        <input
+          class="w-full h-16 text-base font-normal px-4 py-5"
+          placeholder="Enter your email"
+        />
+        <Button class="w-full mt-4">
+          Subscribe Our Newsletter <Icon icon="right-arrow" slot="right-icon" />
+        </Button>
+      </div>
+      <div
+        class="size-[300px] relative mt-12
+    after:bg-gradient-to-t after:from-black after:to-40% after:block after:absolute after:inset-0"
+      >
+        <img
+          class="h-full w-full"
+          src="/places/join-island.jpg"
+          alt="Island"
+        />
+      </div>
+    </section>
+    <Footer />
   </main>
 </Layout>
 

@@ -1,0 +1,59 @@
+---
+import Icon from "../Icon.astro";
+import FooterLinkList from "./FooterLinkList.astro";
+const siteMap = [
+  {
+    name: "About",
+    links: [
+      { text: "About Us", path: "/about-us" },
+      { text: "Features", path: "/features" },
+      { text: "News & Blog", path: "/news-and-blog" },
+    ],
+  },
+  {
+    name: "Company",
+    links: [
+      { text: "FAQs", path: "/faq" },
+      { text: "History", path: "/history" },
+      { text: "Testimonials", path: "/testimonials" },
+    ],
+  },
+  {
+    name: "Contact",
+    links: [
+      { text: "Call Center", path: "/call-center" },
+      { text: "Support Center", path: "/support-center" },
+      { text: "Contact Us", path: "/contact-us" },
+    ],
+  },
+  {
+    name: "Support",
+    links: [
+      { text: "Privacy Policy", path: "/privacy-policy" },
+      { text: "Terms & Services", path: "/terms-and-services" },
+      { text: "Payments", path: "/payments" },
+    ],
+  },
+];
+---
+
+<footer class="bg-container px-6 py-8">
+  <h3 class="text-xl font-semibold mb-4">Travel</h3>
+  <p class="text-base text-body mb-14">
+    Travel with us and explore <br />the world without limits.
+  </p>
+  <div class="grid grid-cols-2 grid-rows-2 gap-y-10">
+    {
+      siteMap.map((item) => (
+        <FooterLinkList name={item.name} links={item.links} />
+      ))
+    }
+  </div>
+  <div class="flex gap-x-6 justify-center mt-28 mb-8">
+    <a href="#" title="Facebook"><Icon icon="facebook" /></a>
+    <a href="#" title="Instagram"><Icon icon="instagram" /></a>
+    <a href="#" title="Twitter"><Icon icon="twitter" /></a>
+    <a href="#" title="Youtube"><Icon icon="youtube" /></a>
+  </div>
+  <p class="text-base text-body"> &copy; Copyright Bedimcode. All rights reserved</p>
+</footer>
