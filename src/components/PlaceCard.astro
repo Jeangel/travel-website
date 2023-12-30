@@ -11,7 +11,7 @@ const { name, country, path } = Astro.props;
 ---
 
 <article>
-  <div class="size-60 relative">
+  <div class="size-60 relative lg:size-[300px]">
     <img
       class="h-full w-full absolute"
       src={`/places/${path}.jpg`}
@@ -20,7 +20,7 @@ const { name, country, path } = Astro.props;
     <div class="h-full w-full absolute bg-gradient-to-t from-black to-40%">
     </div>
   </div>
-  <h3 class="font-semibold text-xl pt-4 pb-2">{name}</h3>
+  <h3 class="font-semibold text-xl pt-4 pb-2 lg:pt-6">{name}</h3>
   <div class="flex gap-x-1">
     <Icon icon="map-pin" />
     <span class="text-sm text-body">{country}</span>

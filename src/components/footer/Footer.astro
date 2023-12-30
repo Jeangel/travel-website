@@ -37,23 +37,33 @@ const siteMap = [
 ];
 ---
 
-<footer class="bg-container px-6 py-8">
-  <h3 class="text-xl font-semibold mb-4">Travel</h3>
-  <p class="text-base text-body mb-14">
-    Travel with us and explore <br />the world without limits.
-  </p>
-  <div class="grid grid-cols-2 grid-rows-2 gap-y-10">
-    {
-      siteMap.map((item) => (
-        <FooterLinkList name={item.name} links={item.links} />
-      ))
-    }
+<footer class="bg-container px-6 py-8 md:pt-16 md:pb-14 md:px-16 lg:px-40">
+  <div class="md:flex md:justify-between">
+    <div>
+      <h3 class="text-xl font-semibold mb-4">Travel</h3>
+      <p class="text-base text-body mb-14">
+        Travel with us and explore <br />the world without limits.
+      </p>
+    </div>
+    <div
+      class="grid grid-cols-2 grid-rows-2 gap-y-10 md:grid-cols-4 md:grid-rows-1 md:gap-y-0 md:gap-x-14 lg:gap-x-[72px]"
+    >
+      {
+        siteMap.map((item) => (
+          <FooterLinkList name={item.name} links={item.links} />
+        ))
+      }
+    </div>
   </div>
-  <div class="flex gap-x-6 justify-center mt-28 mb-8">
-    <a href="#" title="Facebook"><Icon icon="facebook" /></a>
-    <a href="#" title="Instagram"><Icon icon="instagram" /></a>
-    <a href="#" title="Twitter"><Icon icon="twitter" /></a>
-    <a href="#" title="Youtube"><Icon icon="youtube" /></a>
+  <div class="md:flex md:justify-between md:items-end">
+    <div class="flex gap-x-6 justify-center mt-28 mb-8 md:order-2 md:mb-0">
+      <a href="#" title="Facebook"><Icon icon="facebook" /></a>
+      <a href="#" title="Instagram"><Icon icon="instagram" /></a>
+      <a href="#" title="Twitter"><Icon icon="twitter" /></a>
+      <a href="#" title="Youtube"><Icon icon="youtube" /></a>
+    </div>
+    <p class="text-base text-body">
+      &copy; Copyright Bedimcode. All rights reserved
+    </p>
   </div>
-  <p class="text-base text-body"> &copy; Copyright Bedimcode. All rights reserved</p>
 </footer>
