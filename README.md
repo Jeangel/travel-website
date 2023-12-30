@@ -11,4 +11,4 @@
 <a href="https://travel-website-jeangel.vercel.app/" target="_blank">Online travel-website demo</a>
 
 ## Example image
-![Example image of the app running](Example.png "Travel website")
+![Example image of the app running](example.png "Travel website")
