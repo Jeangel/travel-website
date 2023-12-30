@@ -1,5 +1,5 @@
 ---
-import Icon from "./Icon.astro";
+import MapPinIcon from "./icons/MapPinIcon.astro";
 interface Props {
   path: string;
   name: string;
@@ -22,7 +22,7 @@ const { name, country, path } = Astro.props;
   </div>
   <h3 class="font-semibold text-xl pt-4 pb-2 lg:pt-6">{name}</h3>
   <div class="flex gap-x-1">
-    <Icon icon="map-pin" />
+    <MapPinIcon />
     <span class="text-sm text-body">{country}</span>
   </div>
 </article>

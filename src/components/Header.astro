@@ -1,6 +1,7 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
-import Icon from "./Icon.astro";
+import CloseIcon from "./icons/CloseIcon.astro";
+import HamburgerMenuIcon from "./icons/HamburgerMenuIcon.astro";
 ---
 
 <script>
@@ -39,7 +40,7 @@ import Icon from "./Icon.astro";
       aria-expanded="false"
     >
       <span class="sr-only">Open main menu</span>
-      <Icon icon="hamburger-menu" />
+      <HamburgerMenuIcon />
     </button>
     <div
       class="hidden w-full absolute top-8 p-5 pb-8 text-center bg-white bg-opacity-20 backdrop-blur-xl md:backdrop-blur-none md:bg-transparent md:static md:block md:p-0 md:text-left"
@@ -47,7 +48,7 @@ import Icon from "./Icon.astro";
     >
       <div class="w-full flex justify-end mb-6 md:hidden">
         <button class="ml-auto bg-none" id="close-button">
-          <Icon icon="close" />
+          <CloseIcon />
         </button>
       </div>
       <ul

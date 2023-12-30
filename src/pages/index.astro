@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Button from "../components/Button.astro";
-import Icon from "../components/Icon.astro";
+import RightArrowIcon from "../components/icons/RightArrowIcon.astro";
 import CountryCard from "../components/CountryCard.astro";
 import PlaceCard from "../components/PlaceCard.astro";
 import Footer from "../components/footer/Footer.astro";
@@ -30,7 +30,7 @@ import Footer from "../components/footer/Footer.astro";
          islands, mountains and much more, get your trip now.
       </p>
       <Button class="mt-10 mb-16">
-        Start Your Journey <Icon icon="right-arrow" slot="right-icon" />
+        Start Your Journey <RightArrowIcon slot="right-icon" />
       </Button>
       <div
         class="flex flex-col items-center gap-y-6 md:flex-row md:items-start md:gap-x-6 w-full"
@@ -41,7 +41,8 @@ import Footer from "../components/footer/Footer.astro";
         <CountryCard name="Spain" path="home-beach" />
       </div>
     </section>
-    <section id="about"
+    <section
+      id="about"
       class="pt-8 pb-12 px-6 flex flex-col items-center md:px-56 lg:flex-row"
     >
       <div class="flex flex-col items-center lg:items-start lg:flex-1">
@@ -56,7 +57,7 @@ import Footer from "../components/footer/Footer.astro";
           without worries, get your trip and explore the paradises of the world.
         </p>
         <Button class="mt-8 mb-12">
-          Explore Travel <Icon icon="right-arrow" slot="right-icon" />
+          Explore Travel <RightArrowIcon slot="right-icon" />
         </Button>
       </div>
       <div
@@ -90,7 +91,10 @@ import Footer from "../components/footer/Footer.astro";
         <PlaceCard country="Italy" name="Garda Lake" path="popular-lake" />
       </div>
     </section>
-    <section id="explore" class="w-screen pt-8 pb-12 flex flex-col items-center">
+    <section
+      id="explore"
+      class="w-screen pt-8 pb-12 flex flex-col items-center"
+    >
       <div
         class="w-full h-[333px] md:h-[400px] lg:h-[600px] relative flex justify-center items-end pb-6 md:justify-start md:px-40
         bg-explore-beach bg-cover bg-center
@@ -124,8 +128,10 @@ import Footer from "../components/footer/Footer.astro";
     <section
       class="w-screen pt-8 pb-12 px-6 flex flex-col items-center md:flex-row md:px-36 lg:px-64 md:gap-x-[90px] lg:gap-x-[136px]"
     >
-      <div class="md:order-2 md:flex md:flex-col md:justify-start ">
-        <h2 class="font-semibold text-center h-fit text-2xl z-10 md:text-4xl md:text-left">
+      <div class="md:order-2 md:flex md:flex-col md:justify-start">
+        <h2
+          class="font-semibold text-center h-fit text-2xl z-10 md:text-4xl md:text-left"
+        >
           Your Journey<br />Starts Here
         </h2>
         <p class="text-base text-body text-center mt-6 md:text-left">
@@ -137,10 +143,7 @@ import Footer from "../components/footer/Footer.astro";
             placeholder="Enter your email"
           />
           <Button class="w-full mt-4">
-            Subscribe Our Newsletter <Icon
-              icon="right-arrow"
-              slot="right-icon"
-            />
+            Subscribe Our Newsletter <RightArrowIcon slot="right-icon" />
           </Button>
         </div>
       </div>
@@ -148,7 +151,11 @@ import Footer from "../components/footer/Footer.astro";
         class="size-[300px] relative mt-12 md:size-[460px]
     after:bg-gradient-to-t after:from-black after:to-40% after:block after:absolute after:inset-0"
       >
-        <img class="h-full w-full md:object-cover" src="/places/join-island.jpg" alt="Island" />
+        <img
+          class="h-full w-full md:object-cover"
+          src="/places/join-island.jpg"
+          alt="Island"
+        />
       </div>
     </section>
     <Footer />
