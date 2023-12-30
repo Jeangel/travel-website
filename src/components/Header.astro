@@ -3,21 +3,56 @@ import HeaderLink from "./HeaderLink.astro";
 import Icon from "./Icon.astro";
 ---
 
-<header class="w-full">
+<script>
+  import { Collapse } from "flowbite";
+  const target = document.getElementById("navbar-menu");
+  const trigger = document.getElementById("navbar-menu-trigger");
+  const collapse = new Collapse(
+    target,
+    trigger,
+    {},
+    { id: "navbar-menu", override: true }
+  );
+
+  collapse.collapse();
+
+  document.onclick = function (e) {
+    if (!trigger?.contains(e.target as Node)) {
+      collapse.collapse();
+    }
+  };
+
+  document.getElementById("close-button")?.addEventListener("click", () => {
+    collapse.collapse();
+  });
+</script>
+
+<header class="w-full relative">
   <nav class="flex justify-between">
     <a class="font-semibold text-base" href="#home">Travel</a>
     <button
-      data-collapse-toggle="navbar-default"
+      id="navbar-menu-trigger"
+      data-collapse-toggle="navbar-menu"
       type="button"
       class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none"
-      aria-controls="navbar-default"
+      aria-controls="navbar-menu"
       aria-expanded="false"
     >
       <span class="sr-only">Open main menu</span>
       <Icon icon="hamburger-menu" />
     </button>
-    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-      <ul class="flex justify-end md:gap-12 lg:gap-16">
+    <div
+      class="hidden w-full absolute top-8 p-5 pb-8 text-center bg-white bg-opacity-20 backdrop-blur-xl md:backdrop-blur-none md:bg-transparent md:static md:block md:p-0 md:text-left"
+      id="navbar-menu"
+    >
+      <div class="w-full flex justify-end mb-6 md:hidden">
+        <button class="ml-auto bg-none" id="close-button">
+          <Icon icon="close" />
+        </button>
+      </div>
+      <ul
+        class="flex flex-col md:flex-row justify-end md:gap-12 lg:gap-16 gap-y-8"
+      >
         <li>
           <HeaderLink path="#">Home</HeaderLink>
         </li>
