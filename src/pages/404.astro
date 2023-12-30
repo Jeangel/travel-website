@@ -1,0 +1,14 @@
+---
+import HeaderLink from "../components/HeaderLink.astro";
+import Icon from "../components/Icon.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Page not found">
+  <div
+    class="min-h-screen w-screen grid place-content-center px-4 text-center gap-y-2"
+  >
+    <h1 class="uppercase tracking-widest text-white text-2xl">404 | Not Found</h1>
+    <HeaderLink class="inline-flex gap-x-2 justify-center" path="/#home"><Icon icon="left-arrow" /> Go Back</HeaderLink>
+  </div>
+</Layout>
