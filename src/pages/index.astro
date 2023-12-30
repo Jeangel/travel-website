@@ -13,6 +13,7 @@ import Footer from "../components/footer/Footer.astro";
     class="min-h-screen relative bg-main bg-auto bg-top md:bg-contain bg-no-repeat"
   >
     <section
+      id="home"
       class="h-full w-full px-6 pt-5 pb-16 flex flex-col items-center relative bg-gradient-to-t from-black to-100% md:items-start md:px-40 md:py-8 md:to-60%"
     >
       <Header />
@@ -40,7 +41,7 @@ import Footer from "../components/footer/Footer.astro";
         <CountryCard name="Spain" path="home-beach" />
       </div>
     </section>
-    <section
+    <section id="about"
       class="pt-8 pb-12 px-6 flex flex-col items-center md:px-56 lg:flex-row"
     >
       <div class="flex flex-col items-center lg:items-start lg:flex-1">
@@ -69,7 +70,7 @@ import Footer from "../components/footer/Footer.astro";
         />
       </div>
     </section>
-    <section class="pt-16 pb-12 px-6 flex flex-col items-center">
+    <section id="popular" class="pt-16 pb-12 px-6 flex flex-col items-center">
       <h2 class="font-semibold text-center text-2xl mb-12 md:text-4xl">
         Enjoy The Beauty <br />Of The World
       </h2>
@@ -89,7 +90,7 @@ import Footer from "../components/footer/Footer.astro";
         <PlaceCard country="Italy" name="Garda Lake" path="popular-lake" />
       </div>
     </section>
-    <section class="w-screen pt-8 pb-12 flex flex-col items-center">
+    <section id="explore" class="w-screen pt-8 pb-12 flex flex-col items-center">
       <div
         class="w-full h-[333px] md:h-[400px] lg:h-[600px] relative flex justify-center items-end pb-6 md:justify-start md:px-40
         bg-explore-beach bg-cover bg-center
@@ -153,5 +154,3 @@ import Footer from "../components/footer/Footer.astro";
     <Footer />
   </main>
 </Layout>
-
-<style></style>

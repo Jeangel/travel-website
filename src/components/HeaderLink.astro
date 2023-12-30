@@ -1,16 +1,22 @@
 ---
-interface Props {
-  path: string
+interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
+  path: string;
 }
 
-const { path } = Astro.props
-const currentPath = Astro.url.pathname === "" ? "/" : Astro.url.pathname
-const isActive = path === currentPath
+const { path, class: className, ...attributes } = Astro.props;
+const sanitizedPath = Astro.url.pathname.replaceAll("#", "");
+const currentPath = sanitizedPath === "" ? "/" : sanitizedPath;
+const isActive = path === currentPath;
+console.log({ sanitizedPath, currentPath, hash: Astro.url })
 ---
 
 <Fragment>
-  <a href={path} class="text-base font-medium">
+  <a
+    href={path}
+    class={`text-base font-medium hover:text-gray-300 ${className}`}
+    {...attributes}
+  >
     <slot />
   </a>
-  {isActive && <div class="w-[35px] h-0.5 bg-zinc-100"></div>} 
+  {isActive && <div class="w-[35px] h-0.5 bg-zinc-100" />}
 </Fragment>

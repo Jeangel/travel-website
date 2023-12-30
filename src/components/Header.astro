@@ -5,7 +5,7 @@ import Icon from "./Icon.astro";
 
 <header class="w-full">
   <nav class="flex justify-between">
-    <a class="font-semibold text-base">Travel</a>
+    <a class="font-semibold text-base" href="#home">Travel</a>
     <button
       data-collapse-toggle="navbar-default"
       type="button"
@@ -19,16 +19,16 @@ import Icon from "./Icon.astro";
     <div class="hidden w-full md:block md:w-auto" id="navbar-default">
       <ul class="flex justify-end md:gap-12 lg:gap-16">
         <li>
-          <HeaderLink path="/">Home</HeaderLink>
+          <HeaderLink path="#">Home</HeaderLink>
         </li>
         <li>
-          <HeaderLink path="/about">About</HeaderLink>
+          <HeaderLink path="#about">About</HeaderLink>
         </li>
         <li>
-          <HeaderLink path="/popular">Popular</HeaderLink>
+          <HeaderLink path="#popular">Popular</HeaderLink>
         </li>
         <li>
-          <HeaderLink path="/explore">Explore</HeaderLink>
+          <HeaderLink path="#explore">Explore</HeaderLink>
         </li>
       </ul>
     </div>
