@@ -7,7 +7,6 @@ const { path, class: className, ...attributes } = Astro.props;
 const sanitizedPath = Astro.url.pathname.replaceAll("#", "");
 const currentPath = sanitizedPath === "" ? "/" : sanitizedPath;
 const isActive = path === currentPath;
-console.log({ sanitizedPath, currentPath, hash: Astro.url })
 ---
 
 <Fragment>
